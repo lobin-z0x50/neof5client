@@ -10,7 +10,7 @@ Copyright (C) 2014 W.Maeda <w.maeda@neogenia.co.jp>
 概要
 ----
 
-Neof5client は ログラミングコンテスト「ネオ富豪」のためのクライアントプログラムです。
+Neof5client は プログラミングコンテスト「ネオ富豪」のためのクライアントプログラムです。
 ネオ富豪とは、トランプゲーム大富豪をコンピュータプログラムで対戦する大会です。
 
 詳細は公式ホームページを参照のこと。
@@ -21,8 +21,8 @@ http://neof5.neogenia.co.jp/
 Androidアプリについての説明
 ---------------------------
 
-NeoftClient/ 以下に置いてあるのは、Androidアプリのソースコードです。
-Eclipse でプロジェクトインポートしてビルドすることができます。
+Neof5Client/ 以下に置いてあるのは、Androidアプリのソースコードです。
+Eclipse でプロジェクトをインポートしてビルドすることができます。
 ただし、あらかじめ C++ コードを Android NDK でビルドしておく必要があります。
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -30,7 +30,7 @@ Eclipse でプロジェクトインポートしてビルドすることができ
 C++ コードについての説明
 ------------------------
 
-C++コードは Neof5Client/jni 以下にあります。
+C++ コードは Neof5Client/jni 以下にあります。
 Neof5Client/jni/neof5 が本体です。
 
 ### jniディレクトリと内容物の説明
@@ -63,6 +63,7 @@ Android NDK でビルドします。
 ### libwebsocketsのビルド方法
 
 基本的には libwebsocket の README.build に書いてあるとおり。
+
     $ cd libwebsocket-1.23
     $ mkdir build
     $ cd build
@@ -75,9 +76,13 @@ Android NDK でビルドします。
 先に libwebsockets をビルドしておく必要があります。
 
 ビルド方法は単純にmakeするだけです。
+
     $ make
+
 clang を使う場合は、
+
     $ make CC=clang
+
 として下さい。
 実行ファイルはカレントディレクトリに作成されます。
 clientmain というファイルがそうです。
